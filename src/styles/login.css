@@ -1,0 +1,53 @@
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .login-form {
+    margin-bottom: 24px;
+  }
+  
+  .login-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .login-form-button {
+    width: 100%;
+  }
+  
+  .login-form-forgot {
+    float: right;
+  }
+  
+  .login-form-forgot a {
+    color: #888;
+  }
+  
+  .login-form-forgot a:hover {
+    color: #333;
+  }
+  
+  .login-form-register {
+    text-align: center;
+  }
+  
+  .login-form-register a {
+    color: #888;
+  }
+  
+  .login-form-register a:hover {
+    color: #333;
+  }
+  
