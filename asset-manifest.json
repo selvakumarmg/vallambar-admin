@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vallambar-admin/static/css/main.13d384a5.css",
+    "main.js": "/vallambar-admin/static/js/main.5b8e1ff5.js",
+    "static/js/787.96a09c75.chunk.js": "/vallambar-admin/static/js/787.96a09c75.chunk.js",
+    "index.html": "/vallambar-admin/index.html",
+    "main.13d384a5.css.map": "/vallambar-admin/static/css/main.13d384a5.css.map",
+    "main.5b8e1ff5.js.map": "/vallambar-admin/static/js/main.5b8e1ff5.js.map",
+    "787.96a09c75.chunk.js.map": "/vallambar-admin/static/js/787.96a09c75.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13d384a5.css",
+    "static/js/main.5b8e1ff5.js"
+  ]
+}
