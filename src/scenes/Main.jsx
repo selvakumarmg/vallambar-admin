@@ -11,6 +11,12 @@ export const routes = [
     requiresAuth: false,
   },
   {
+    path: '/vallambar-admin',
+    component: Dashboard,
+    exact: true,
+    requiresAuth: false,
+  },
+  {
     path: '/dashboard',
     component: Dashboard,
     requiresAuth: true,
