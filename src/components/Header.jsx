@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        {/* <div className="logo">Your Logo</div> */}
+        <div className="logo">Your Logo</div>
         <div className="menu-icon" onClick={toggleDrawer}>
           <i className="fa fa-bars">Menu</i>
         </div>

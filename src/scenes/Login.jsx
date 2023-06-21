@@ -4,17 +4,21 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { auth } from '../constants/firebase';
 import '../styles/login.css';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { login } from '../services/redux/reducers/AuthReducer';
 
 const Login = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const onFinish = async (values) => {
     const { email, password } = values;
     try {
-        const userCredential = await auth.signInWithEmailAndPassword(email, password);
-        const { user } = userCredential;
-        const userId = user.uid;
-      message.success(userId);
+      const userCredential = await auth.signInWithEmailAndPassword(email, password);
+      const { user } = userCredential;
+      message.success('LoggedIn Successfully');
+      console.log("user", user)
+      dispatch(login());
       navigate('/');
     } catch (error) {
       console.error('Error logging in:', error);
@@ -23,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <Form initialValues={{email:'abc@gmail.com',password:'123456'}} name="login" onFinish={onFinish} className="login-container">
+    <Form initialValues={{ email: 'abc@gmail.com', password: '123456' }} name="login" onFinish={onFinish} className="login-container">
       <h2 className="login-title">Login</h2>
       <Form.Item
         name="email"

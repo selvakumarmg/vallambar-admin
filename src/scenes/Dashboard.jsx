@@ -8,6 +8,8 @@ import {
 import Posts from "./Posts";
 import Aliance from "./Aliance";
 import '../styles/dashboard.css';
+import Ebooks from "./Ebooks";
+import Advertisements from "./Advertisement";
 
 const { Header, Sider, Content } = Layout;
 
@@ -25,10 +27,12 @@ const Dashboard = () => {
 
   const renderContent = () => {
     switch (selectedOption) {
-      // case "dashboard":
-      //   return <Dashboard />;
-      case "analytics":
+      case "ebook":
+        return <Ebooks />;
+      case "aliance":
         return <Aliance />;
+      case "adv":
+        return <Advertisements />;
       case "posts":
       default:
         return <Posts />;
@@ -46,11 +50,17 @@ const Dashboard = () => {
           selectedKeys={[selectedOption]}
           onSelect={handleMenuSelect}
         >
-          <Menu.Item key="analytics" icon={<BarChartOutlined />}>
+          <Menu.Item key="aliance" icon={<BarChartOutlined />}>
             Aliance
           </Menu.Item>
           <Menu.Item key="posts" icon={<FileOutlined />}>
             Posts
+          </Menu.Item>
+          <Menu.Item key="ebook" icon={<FileOutlined />}>
+            Ebooks
+          </Menu.Item>
+          <Menu.Item key="adv" icon={<FileOutlined />}>
+            Advertisment
           </Menu.Item>
         </Menu>
       </Sider>
@@ -63,7 +73,7 @@ const Dashboard = () => {
           />
         </Header>
         <Content style={{ margin: "16px" }}>
-        {renderContent()}
+          {renderContent()}
         </Content>
       </Layout>
     </Layout>

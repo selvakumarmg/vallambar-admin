@@ -1,8 +1,8 @@
 import React from 'react'
-import Dashboard from './scenes/Dashboard'
-import Login from './scenes/Login'
 import Main from './scenes/Main'
 import firebase from 'firebase/compat/app';
+import { Provider } from 'react-redux';
+import store from './services/redux/store';
 
 
 const firebaseConfig = {
@@ -19,7 +19,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const App = () => {
   return (
-    <Main/>
+   <Provider store={store}>
+     <Main/>
+   </Provider>
   )
 }
 
